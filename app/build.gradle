@@ -10,6 +10,7 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName '1.0'
+        resConfigs 'en'
     }
 
     buildTypes {
@@ -26,5 +27,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.3.0'
     compile 'com.android.support:percent:25.3.0'
 
-    compile 'ac.robinson.bettertogether:api:1.0.0'
+    compile 'ac.robinson.bettertogether:api:1.0.0' // the Better Together communication API
 }

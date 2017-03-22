@@ -69,7 +69,7 @@ public class ChatActivity extends BasePluginActivity {
 
 		ArrayList<MessageItem> messageItems;
 		if (savedInstanceState != null) {
-			messageItems = savedInstanceState.getParcelableArrayList(SAVED_LIST); // TODO: scroll to end on restore
+			messageItems = savedInstanceState.getParcelableArrayList(SAVED_LIST); // TODO: scroll to end on restore?
 		} else {
 			messageItems = new ArrayList<>();
 		}
