@@ -15,7 +15,7 @@
   ~ permissions and limitations under the License.
   -->
 
-<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                                xmlns:app="http://schemas.android.com/apk/res-auto"
                                                android:layout_width="match_parent"
                                                android:layout_height="wrap_content">
@@ -50,4 +50,4 @@
 		android:textSize="@dimen/message_text_size"
 		app:layout_marginLeftPercent="@fraction/message_margin_percent"/>
 
-</android.support.percent.PercentRelativeLayout>
+</androidx.percentlayout.widget.PercentRelativeLayout>

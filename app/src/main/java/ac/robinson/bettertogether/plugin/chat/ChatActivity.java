@@ -20,12 +20,6 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,12 +31,19 @@ import java.util.ArrayList;
 
 import ac.robinson.bettertogether.api.BasePluginActivity;
 import ac.robinson.bettertogether.api.messaging.BroadcastMessage;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
- * This class demonstrates how to create a Better Together plugin, using a simple chat application as an example. Messages
+ * This class demonstrates how to create a Better Together plugin, using a simple chat application as an example.
+ * Messages
  * between devices are sent and received using {@link #sendMessage(BroadcastMessage)} and
- * {@link #onMessageReceived(BroadcastMessage)}. Plugin setup happens in AndroidManifest.xml - see that file for interface and
+ * {@link #onMessageReceived(BroadcastMessage)}. Plugin setup happens in AndroidManifest.xml - see that file for
+ * interface and
  * other configuration.
  */
 public class ChatActivity extends BasePluginActivity {
@@ -59,7 +60,7 @@ public class ChatActivity extends BasePluginActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_chat);
 
-		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+		Toolbar toolbar = findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 		ActionBar actionBar = getSupportActionBar();
 		if (actionBar != null) {
@@ -75,12 +76,13 @@ public class ChatActivity extends BasePluginActivity {
 		}
 
 		mChatMessageViewAdapter = new ChatMessageAdapter(messageItems);
-		mChatMessageView = (RecyclerView) findViewById(R.id.message_list);
-		mChatMessageView.setLayoutManager(new LinearLayoutManager(ChatActivity.this, LinearLayoutManager.VERTICAL, false));
+		mChatMessageView = findViewById(R.id.message_list);
+		mChatMessageView.setLayoutManager(new LinearLayoutManager(ChatActivity.this, LinearLayoutManager.VERTICAL,
+				false));
 		mChatMessageView.setHasFixedSize(true);
 		mChatMessageView.setAdapter(mChatMessageViewAdapter);
 
-		mEnteredMessage = (EditText) findViewById(R.id.entered_message);
+		mEnteredMessage = findViewById(R.id.entered_message);
 	}
 
 	@Override
@@ -90,7 +92,8 @@ public class ChatActivity extends BasePluginActivity {
 	}
 
 	/**
-	 * Messages from other devices arrive here to be processed by your plugin. Messages can be sent to other devices using
+	 * Messages from other devices arrive here to be processed by your plugin. Messages can be sent to other devices
+	 * using
 	 * {@link #sendMessage(BroadcastMessage)}.
 	 *
 	 * @param message The message received.
@@ -132,6 +135,7 @@ public class ChatActivity extends BasePluginActivity {
 			return 0;
 		}
 
+		@NonNull
 		@Override
 		public String toString() {
 			return mMessage + " (" + mOwnMessage + ")";
@@ -147,7 +151,6 @@ public class ChatActivity extends BasePluginActivity {
 				return new MessageItem(in);
 			}
 
-			@SuppressFBWarnings("SUA_SUSPICIOUS_UNINITIALIZED_ARRAY")
 			public MessageItem[] newArray(int size) {
 				return new MessageItem[size];
 			}
@@ -171,14 +174,15 @@ public class ChatActivity extends BasePluginActivity {
 			mChatMessageView.scrollToPosition(mMessages.size() - 1);
 		}
 
+		@NonNull
 		@Override
 		public ChatMessageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-			return new ChatMessageViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_message, parent,
-					false));
+			return new ChatMessageViewHolder(LayoutInflater.from(parent.getContext())
+					.inflate(R.layout.item_message, parent, false));
 		}
 
 		@Override
-		public void onBindViewHolder(ChatMessageViewHolder holder, int position) {
+		public void onBindViewHolder(@NonNull ChatMessageViewHolder holder, int position) {
 			Resources resources = getResources();
 			MessageItem message = mMessages.get(position);
 			if (message.mOwnMessage) {
@@ -207,8 +211,8 @@ public class ChatActivity extends BasePluginActivity {
 
 			ChatMessageViewHolder(View itemView) {
 				super(itemView);
-				mMessageLeft = (TextView) itemView.findViewById(R.id.message_text_left);
-				mMessageRight = (TextView) itemView.findViewById(R.id.message_text_right);
+				mMessageLeft = itemView.findViewById(R.id.message_text_left);
+				mMessageRight = itemView.findViewById(R.id.message_text_right);
 			}
 		}
 	}

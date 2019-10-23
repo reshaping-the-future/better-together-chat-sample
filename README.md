@@ -6,7 +6,7 @@ This is a sample plugin for Better Together, demonstrating its features using a 
 ## Getting started
 This plugin is an Android Studio project – open it in Android Studio to begin.
 
-All of the Better Together aspects of this plugin are documented in place. For general API usage documentation, see the [api source and documentation](https://github.com/reshaping-the-future/better-together-api).
+All of the Better Together aspects of this plugin are documented in place. For general API usage documentation, see the [API source and documentation](https://github.com/reshaping-the-future/better-together-api).
 
 ## License
 Apache 2.0

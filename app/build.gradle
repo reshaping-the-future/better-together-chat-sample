@@ -1,13 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '25.0.2'
+    compileSdkVersion 28
 
     defaultConfig {
         applicationId 'ac.robinson.bettertogether.plugin.chat'
-        minSdkVersion 9
-        targetSdkVersion 25
+        minSdkVersion 14
+        targetSdkVersion 28
         versionCode 1
         versionName '1.0'
         resConfigs 'en'
@@ -23,9 +22,9 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:25.3.0'
-    compile 'com.android.support:recyclerview-v7:25.3.0'
-    compile 'com.android.support:percent:25.3.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.percentlayout:percentlayout:1.0.0'
 
-    compile 'ac.robinson.bettertogether:api:1.0.0' // the Better Together communication API
+    implementation 'ac.robinson.bettertogether:api:1.0.1' // the Better Together communication API
 }
