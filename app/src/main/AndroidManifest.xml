@@ -15,7 +15,8 @@
   ~ permissions and limitations under the License.
   -->
 
-<manifest package="ac.robinson.bettertogether.plugin.chat"
+<manifest xmlns:tools="http://schemas.android.com/tools"
+	package="ac.robinson.bettertogether.plugin.chat"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
 	<!-- Your application must have an icon and a label, which will be displayed in the Better Together -->
@@ -27,7 +28,8 @@
 		android:fullBackupContent="@xml/backup_content"
 		android:icon="@mipmap/chat_ic_launcher"
 		android:label="@string/chat_plugin_name"
-		android:theme="@style/BetterTogether.PluginStyle.orange">
+		android:theme="@style/BetterTogether.PluginStyle.orange"
+		tools:ignore="GoogleAppIndexingWarning">
 
 		<!-- Optional: we can style the plugin launcher in one of the 19 inbuilt API themes, based on -->
 		<!-- Google's Material Design colour schemes: https://material.io/guidelines/style/color.html -->
