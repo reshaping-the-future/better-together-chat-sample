@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
 
+ext {
+	appAndAPIVersion = '1.0.3'
+}
+
 android {
 	compileSdkVersion 28
 
@@ -7,8 +11,8 @@ android {
 		applicationId 'ac.robinson.bettertogether.plugin.chat'
 		minSdkVersion 14
 		targetSdkVersion 28
-		versionCode 3
-		versionName '1.0.2'
+		versionCode 4
+		versionName appAndAPIVersion
 		resConfigs 'en'
 	}
 
@@ -26,5 +30,5 @@ dependencies {
 	implementation 'androidx.recyclerview:recyclerview:1.1.0'
 	implementation 'androidx.percentlayout:percentlayout:1.0.0'
 
-	implementation 'ac.robinson.bettertogether:api:1.0.3' // the Better Together communication API
+	implementation "ac.robinson.bettertogether:api:$appAndAPIVersion" // the Better Together communication API
 }
