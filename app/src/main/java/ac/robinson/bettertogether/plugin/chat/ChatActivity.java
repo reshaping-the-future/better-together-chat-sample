@@ -86,7 +86,7 @@ public class ChatActivity extends BasePluginActivity {
 	}
 
 	@Override
-	protected void onSaveInstanceState(Bundle outState) {
+	protected void onSaveInstanceState(@NonNull Bundle outState) {
 		outState.putParcelableArrayList(SAVED_LIST, mChatMessageViewAdapter.getItems());
 		super.onSaveInstanceState(outState);
 	}

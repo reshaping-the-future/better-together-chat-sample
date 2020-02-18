@@ -26,5 +26,5 @@ dependencies {
 	implementation 'androidx.recyclerview:recyclerview:1.1.0'
 	implementation 'androidx.percentlayout:percentlayout:1.0.0'
 
-	implementation 'ac.robinson.bettertogether:api:1.0.2' // the Better Together communication API
+	implementation 'ac.robinson.bettertogether:api:1.0.3' // the Better Together communication API
 }

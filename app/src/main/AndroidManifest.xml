@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (C) 2017 The Better Together Toolkit
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,9 +14,9 @@
   ~ permissions and limitations under the License.
   -->
 
-<manifest xmlns:tools="http://schemas.android.com/tools"
-	package="ac.robinson.bettertogether.plugin.chat"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	package="ac.robinson.bettertogether.plugin.chat">
 
 	<!-- Your application must have an icon and a label, which will be displayed in the Better Together -->
 	<!-- app launcher list. Plugins without either of these attributes will not be displayed in the app -->
@@ -37,7 +36,7 @@
 		<!-- of the scheme (e.g., "green", "red", "deep_purple"), with spaces replaced by underscores -->
 		<meta-data
 			android:name="ac.robinson.bettertogether.intent.extra.PLUGIN_THEME"
-			android:value="orange"/>
+			android:value="orange" />
 
 		<!-- Your activity must be exported (so that it can be launched by the Better Together host -->
 		<!-- app, and have an icon and label (which will be used in the list of activities for your -->
@@ -49,17 +48,18 @@
 			android:icon="@drawable/ic_chat_orange_800_48dp"
 			android:label="@string/chat_activity_name">
 			<intent-filter>
-				<action android:name="ac.robinson.bettertogether.intent.action.LAUNCH_PLUGIN"/>
+				<action android:name="ac.robinson.bettertogether.intent.action.LAUNCH_PLUGIN" />
 			</intent-filter>
 		</activity>
 
 		<!-- This plugin doesn't provide a launcher, so we import the default info activity, which -->
 		<!-- launches Better Together (if present), or opens the Play Store to prompt installation -->
 		<activity
-			android:name="ac.robinson.bettertogether.api.DefaultActivity">
+			android:name="ac.robinson.bettertogether.api.DefaultActivity"
+			android:theme="@android:style/Theme.NoDisplay">
 			<intent-filter>
-				<action android:name="android.intent.action.MAIN"/>
-				<category android:name="android.intent.category.INFO"/>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.INFO" />
 			</intent-filter>
 		</activity>
 	</application>
