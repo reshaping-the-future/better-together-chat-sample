@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2017 The Better Together Toolkit
+  ~ Copyright (C) 2020 The Better Together Toolkit
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -15,12 +15,7 @@
   ~ permissions and limitations under the License.
   -->
 
-<resources>
-	<color name="chat_ic_launcher_background">#ffffff</color>
-
-	<color name="message_background_own">#ffffff</color>
-	<color name="message_background_other">#ffb300</color>
-
-	<color name="message_text_own">#4c4c4c</color>
-	<color name="message_text_other">#ffffff</color>
-</resources>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/chat_ic_launcher_background"/>
+    <foreground android:drawable="@drawable/chat_ic_launcher_foreground"/>
+</adaptive-icon>

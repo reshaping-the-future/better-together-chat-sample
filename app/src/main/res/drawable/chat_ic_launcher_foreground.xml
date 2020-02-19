@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2020 The Better Together Toolkit
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+  ~ or implied. See the License for the specific language governing
+  ~ permissions and limitations under the License.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="2983.6365"
+    android:viewportHeight="2983.6365">
+  <group android:translateX="671.3182"
+      android:translateY="968.3182">
+    <path
+        android:pathData="M1341.1,760.73C1519.82,691.36 1640.73,558.48 1640.73,405.93C1640.73,181.74 1379.68,0 1057.67,0C735.66,0 474.61,181.74 474.61,405.93C474.61,630.11 735.66,811.86 1057.67,811.86C1059.59,811.86 1061.5,811.82 1063.41,811.8C1112.22,848.05 1320.95,984.65 1550.54,861.74C1550.54,861.74 1407.08,847.17 1341.1,760.73"
+        android:fillColor="#EF6D22"
+        android:fillType="nonZero"/>
+    <path
+        android:pathData="M431.76,433.53C431.76,421.43 432.56,409.48 434.05,397.66C422.95,396.98 411.73,396.63 400.39,396.63C179.26,396.63 0,526.16 0,685.94C0,794.67 83.03,889.37 205.76,938.79C160.45,1000.42 61.93,1010.8 61.93,1010.8C219.59,1098.41 362.93,1001.06 396.45,975.21C397.76,975.21 399.07,975.25 400.39,975.25C564.78,975.25 706.02,903.66 767.68,801.26C569.23,736.51 431.76,596.2 431.76,433.53"
+        android:fillColor="#EF6D22"
+        android:fillType="nonZero"/>
+  </group>
+</vector>
