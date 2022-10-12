@@ -77,8 +77,7 @@ public class ChatActivity extends BasePluginActivity {
 
 		mChatMessageViewAdapter = new ChatMessageAdapter(messageItems);
 		mChatMessageView = findViewById(R.id.message_list);
-		mChatMessageView.setLayoutManager(new LinearLayoutManager(ChatActivity.this, LinearLayoutManager.VERTICAL,
-				false));
+		mChatMessageView.setLayoutManager(new LinearLayoutManager(ChatActivity.this, LinearLayoutManager.VERTICAL, false));
 		mChatMessageView.setHasFixedSize(true);
 		mChatMessageView.setAdapter(mChatMessageViewAdapter);
 
@@ -158,7 +157,7 @@ public class ChatActivity extends BasePluginActivity {
 	}
 
 	private class ChatMessageAdapter extends RecyclerView.Adapter<ChatMessageAdapter.ChatMessageViewHolder> {
-		private ArrayList<MessageItem> mMessages;
+		private final ArrayList<MessageItem> mMessages;
 
 		ChatMessageAdapter(ArrayList<MessageItem> initialItems) {
 			mMessages = initialItems;
@@ -177,8 +176,8 @@ public class ChatActivity extends BasePluginActivity {
 		@NonNull
 		@Override
 		public ChatMessageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-			return new ChatMessageViewHolder(LayoutInflater.from(parent.getContext())
-					.inflate(R.layout.item_message, parent, false));
+			return new ChatMessageViewHolder(
+					LayoutInflater.from(parent.getContext()).inflate(R.layout.item_message, parent, false));
 		}
 
 		@Override

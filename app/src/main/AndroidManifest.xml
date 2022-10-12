@@ -56,6 +56,7 @@
 		<!-- launches Better Together (if present), or opens the Play Store to prompt installation -->
 		<activity
 			android:name="ac.robinson.bettertogether.api.DefaultActivity"
+			android:exported="true"
 			android:theme="@android:style/Theme.NoDisplay">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />

@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/better-together-chat-sample.iml" filepath="$PROJECT_DIR$/better-together-chat-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/better-together-chat-sample.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/better-together-chat-sample.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/better-together-chat-sample.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/better-together-chat-sample.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/better-together-chat-sample.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/better-together-chat-sample.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/better-together-chat-sample.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/better-together-chat-sample.app.unitTest.iml" />
     </modules>
   </component>
 </project>

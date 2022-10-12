@@ -5,12 +5,12 @@ ext {
 }
 
 android {
-	compileSdkVersion 28
+	compileSdkVersion 32
 
 	defaultConfig {
 		applicationId 'ac.robinson.bettertogether.plugin.chat'
 		minSdkVersion 14
-		targetSdkVersion 28
+		targetSdkVersion 32
 		versionCode 5
 		versionName appAndAPIVersion // app version tracks API version
 		resConfigs 'en'
@@ -26,8 +26,8 @@ android {
 }
 
 dependencies {
-	implementation 'androidx.appcompat:appcompat:1.1.0'
-	implementation 'androidx.recyclerview:recyclerview:1.1.0'
+	implementation 'androidx.appcompat:appcompat:1.5.1'
+	implementation 'androidx.recyclerview:recyclerview:1.2.1'
 	implementation 'androidx.percentlayout:percentlayout:1.0.0'
 
 	implementation "ac.robinson.bettertogether:api:$appAndAPIVersion" // the Better Together communication API
